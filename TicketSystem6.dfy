@@ -127,6 +127,9 @@ lemma Inv1IsInvariant(s:State, s':State)
 { }
 
 // Inv2 is an invariant of the system.
+// This proof was ommited in Leino's paper, it can be made shorter,
+// however we are stressing here the typical structure of
+// an invariante proof which resembles how is also done in TLAPM for TLA+.
 lemma Inv2IsInvariant(s:State, s':State)
   ensures Init(s) ==> Inv2(s)
   ensures Inv2(s) && Next(s, s') ==> Inv2(s')
